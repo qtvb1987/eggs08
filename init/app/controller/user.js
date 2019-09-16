@@ -19,7 +19,10 @@ class UserController extends Controller {
    */
   async create() {
     const { ctx } = this;
-    ctx.body = 'user ctrl';
+     
+    const res={abc:123}
+    //设置响应内容
+    ctx.helper.success({ctx,res})
   }
 }
 module.exports = UserController;

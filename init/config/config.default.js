@@ -16,23 +16,23 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1568528958452_2434';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = ['errorHandler'];
 
-  config.swaggerdoc={
-    dirScanner:'./app/controller',
-    appInfo:{
-      title:'eggs 接口',
-      description:'eggs 接口 swagger-ui for egg',
-      version:'v1.0'
+  config.swaggerdoc = {
+    dirScanner: './app/controller',
+    appInfo: {
+      title: 'eggs 接口',
+      description: 'eggs 接口 swagger-ui for egg',
+      version: 'v1.0',
 
     },
-    schemes:['http','https'],
-    consumes:['application/json'],
-    produces:['application/json'],
-    enableSecurity:false,
-    //enableValidate:true,
-    routerMap:true,
-    enable:true
+    schemes: [ 'http', 'https' ],
+    consumes: [ 'application/json' ],
+    produces: [ 'application/json' ],
+    enableSecurity: false,
+    // enableValidate:true,
+    routerMap: true,
+    enable: true,
   };
 
   // add your user config here
